@@ -1,4 +1,4 @@
-name: Ninja_Works Plugin
+name: NinjaWorksPlugin
 version: '${project.version}'
 main: net.ninjaworks.plugins.ninjaworksplugin.NinjaWorksPlugin
 api-version: 1.19

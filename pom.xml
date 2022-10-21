@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.ninjaworks.plugins</groupId>
-    <artifactId>Ninja_Works-Plugin</artifactId>
+    <artifactId>NinjaWorksPlugin</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Ninja_Works Plugin</name>
+    <name>NinjaWorksPlugin</name>
 
     <description>The official plugin for the Ninja_Works server.</description>
     <properties>
