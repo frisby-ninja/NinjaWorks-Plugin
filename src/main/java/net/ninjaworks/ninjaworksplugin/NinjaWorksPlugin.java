@@ -1,6 +1,6 @@
 package net.ninjaworks.ninjaworksplugin;
 
-import net.ninjaworks.ninjaworksplugin.commands.ConsoleCommand;
+import net.ninjaworks.ninjaworksplugin.commands.RemoveArrowsCommand;
 import net.ninjaworks.ninjaworksplugin.registrations.Registrations;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -19,8 +19,7 @@ public final class NinjaWorksPlugin extends JavaPlugin{
     }
 
     public void registerCommands() {
-        this.getCommand("console").setExecutor(new ConsoleCommand());
-
+        this.getCommand("removearrows").setExecutor(new RemoveArrowsCommand());
     }
 
     @Override
