@@ -6,6 +6,6 @@ authors: [ frisby_ninja ]
 description: The official plugin for the Ninja_Works server.
 website: https://www.youtube.com/channel/UCklNX1VXDpoU-cHOUXO-LTw
 commands:
-  arrowremover:
+  removearrows:
     description: Removes arrows from the given player.
     usage: /removearrows [player]
