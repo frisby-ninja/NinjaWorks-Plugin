@@ -1,7 +1,7 @@
-package net.ninjaworks.plugins.ninjaworksplugin;
+package net.ninjaworks.ninjaworksplugin;
 
-import net.ninjaworks.plugins.ninjaworksplugin.commands.ConsoleCommand;
-import net.ninjaworks.plugins.ninjaworksplugin.registrations.Registrations;
+import net.ninjaworks.ninjaworksplugin.commands.ConsoleCommand;
+import net.ninjaworks.ninjaworksplugin.registrations.Registrations;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;

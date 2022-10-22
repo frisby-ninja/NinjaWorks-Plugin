@@ -1,6 +1,6 @@
 name: NinjaWorksPlugin
 version: '${project.version}'
-main: net.ninjaworks.plugins.ninjaworksplugin.NinjaWorksPlugin
+main: NinjaWorksPlugin
 api-version: 1.19
 authors: [ frisby_ninja ]
 description: The official plugin for the Ninja_Works server.
