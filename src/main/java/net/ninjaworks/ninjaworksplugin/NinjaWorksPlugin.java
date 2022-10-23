@@ -1,5 +1,6 @@
 package net.ninjaworks.ninjaworksplugin;
 
+import net.ninjaworks.ninjaworksplugin.commands.AdminCommand;
 import net.ninjaworks.ninjaworksplugin.commands.RemoveArrowsCommand;
 import net.ninjaworks.ninjaworksplugin.registrations.Registrations;
 import org.bukkit.Bukkit;
@@ -20,6 +21,7 @@ public final class NinjaWorksPlugin extends JavaPlugin{
 
     public void registerCommands() {
         this.getCommand("removearrows").setExecutor(new RemoveArrowsCommand());
+        this.getCommand("admin").setExecutor(new AdminCommand());
     }
 
     @Override

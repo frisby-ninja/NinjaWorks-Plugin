@@ -9,3 +9,7 @@ commands:
   removearrows:
     description: Removes arrows from the given player.
     usage: /removearrows [player]
+
+    admin:
+      description: Customises the administrator list.
+      usage: /admin add [player]/remove [player]/list

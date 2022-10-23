@@ -15,7 +15,7 @@ public class RemoveArrowsCommand implements CommandExecutor {
             if (Bukkit.getOnlinePlayers().contains(target)) {
                 //Correct
                 target.setArrowsInBody(0);
-                sender.sendMessage("Removed arrows from" + target + "!");
+                sender.sendMessage("Removed arrows from " + target + "!");
                 return true;
 
             } else {
