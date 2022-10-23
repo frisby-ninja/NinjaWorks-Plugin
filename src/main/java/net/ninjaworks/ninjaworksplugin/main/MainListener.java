@@ -55,7 +55,7 @@ public class MainListener implements Listener {
         Player p = event.getPlayer();
         Block b = event.getBlockPlaced();
         Location l = b.getLocation();
-        boolean isAllowed = new MainExecutor().isBlockPlacementAllowed(p, l);
+        boolean isAllowed = new MainExecutor().isIllegalBlockPlacementAllowed(p, l);
         if(isAllowed == false) {
             new MainExecutor().removeBlock(l);
         }

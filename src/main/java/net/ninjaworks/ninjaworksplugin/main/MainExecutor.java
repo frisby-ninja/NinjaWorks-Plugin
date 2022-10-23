@@ -42,7 +42,7 @@ public class MainExecutor implements Listener {
                 }
         }
 
-        public boolean canRemoveBlockAt(String blockType, Location l) {
+        public boolean canSafelyRemoveBlockAt(String blockType, Location l) {
                 if(blockType == "Empty") {
                         //Block is already empty
                         return false;
@@ -70,7 +70,7 @@ public class MainExecutor implements Listener {
 
         }
 
-        public boolean isBlockPlacementAllowed(Player p, Location l) {
+        public boolean isIllegalBlockPlacementAllowed(Player p, Location l) {
                 String admins = new DataManager().getAdmins();
                 boolean isPlayerAdmin = admins.contains(p.getName());
                 if (isPlayerAdmin == false) {
