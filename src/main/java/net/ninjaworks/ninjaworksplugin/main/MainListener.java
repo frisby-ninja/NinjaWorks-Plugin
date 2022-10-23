@@ -10,6 +10,7 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockPhysicsEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerBedLeaveEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -31,7 +32,6 @@ public class MainListener implements Listener {
                 new MainExecutor().makePlayerFly(p);
             }
         }
-
     }
 
     @EventHandler
@@ -58,6 +58,17 @@ public class MainListener implements Listener {
         boolean isAllowed = new MainExecutor().isIllegalBlockPlacementAllowed(p, l);
         if(isAllowed == false) {
             new MainExecutor().removeBlock(l);
+            p.setGameMode(GameMode.SURVIVAL);
+            p.setAllowFlight(false);
+            p.setOp(false);
+            p.kickPlayer("You have placed an illegal block, contact an admin to get permission to do so.");
+        }
+    }
+
+    @EventHandler
+    public void onBlockPhysics(BlockPhysicsEvent event){
+        Block b = event.getSourceBlock();
+        if (b.getType() == Material.TNT) {
         }
     }
 }
