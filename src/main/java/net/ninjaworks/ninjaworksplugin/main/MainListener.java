@@ -1,11 +1,16 @@
 package net.ninjaworks.ninjaworksplugin.main;
 
 
+import net.ninjaworks.ninjaworksplugin.data.DataManager;
 import org.bukkit.GameMode;
+import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.Sound;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerBedLeaveEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -45,4 +50,14 @@ public class MainListener implements Listener {
         new MainExecutor().removeArrowsFrom(p);
     }
 
+    @EventHandler
+    public void onBlockPlace(BlockPlaceEvent event) {
+        Player p = event.getPlayer();
+        Block b = event.getBlockPlaced();
+        Location l = b.getLocation();
+        boolean isAllowed = new MainExecutor().isBlockPlacementAllowed(p, l);
+        if(isAllowed == false) {
+            new MainExecutor().removeBlock(l);
+        }
+    }
 }
